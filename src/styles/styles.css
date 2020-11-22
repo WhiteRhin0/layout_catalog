@@ -111,7 +111,7 @@ body {
 
 .card {
   width: 200px;
-  padding: 30px 14px 14px;
+  padding: 0 14px 14px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -120,14 +120,27 @@ body {
   margin-bottom: 51px;
 }
 
+.card__box-image {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+  margin: 13px 0 42px;
+  border: 3px solid transparent;
+  transition: transform 1s linear;
+}
+
+.card__box-image:hover {
+  transform: scale(1.2);
+  border: 3px #f3f3f3 solid;
+}
+
 .card__image {
   width: 160px;
   height: 134px;
-  margin: auto;
 }
 
 .card__description {
-  margin: 45px 0 5px;
+  margin: 0 0 5px;
   font-size: 12px;
   font-weight: 500;
   line-height: 15px;
@@ -167,6 +180,9 @@ body {
   background-color: #00acdc;
   border-radius: 5px;
   margin-top: 20px;
+  transition: background-color 0.4s linear,
+    border-color 0.4s linear,
+    color 0.4s linear;
 }
 
 .card:hover {
