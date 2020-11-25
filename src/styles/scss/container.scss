@@ -1,6 +1,6 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   max-width: 944px;
   margin: 0 auto;
@@ -15,5 +15,11 @@
 @media all and (min-width: 1200px) {
   .container {
     width: calc(100% - 256px);
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, 200px);
   }
 }
